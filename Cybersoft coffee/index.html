@@ -1,0 +1,141 @@
+<!-- DOCTYPE html: khai báo phiên bản ngôn ngữ html -->
+<!DOCTYPE html>
+<html>
+<!-- tag: các thẻ (bao gồm 1 thẻ đóng, 1 thẻ mở) -->
+
+<head>
+    <!-- meta: tên thẻ 
+    name: thuộc tính của thẻ
+    description: giá trị của thuộc tính
+-->
+    <!-- trình duyệt web: báo trình duyệt web hiển thị nội dung có dấu -->
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <!-- hỗ trợ công cụ SEO (công cụ tìm kiếm) -->
+    <meta name="description" content="Cybersoft Cafe">
+    <!-- Cybersoft Cafe: nội dung của thẻ -->
+    <!-- hỗ trợ công cụ SEO
+    hỗ trợ người dùng website -->
+    <title>Cybersoft Cafe</title>
+</head>
+
+<body>
+    <!-- body: chứa thông tin người dùng đọc được -->
+    <!-- heading: thẻ tiêu đề (có 6 kích thước thẻ heading: h1 tới h6) -->
+    <h1 style="background-color: #394a59; color: white; text-align: center;">Cybersoft Cafe</h1>
+    <!-- <h6>Cybersoft Cafe</h6> -->
+    <!-- navigation bar -->
+    <!-- anchor: thẻ liên kết -->
+    <!-- Liên kết nội: giúp người dùng xem nhanh nội dung của một trang web dài(landing page) -->
+    <a href="#">Home</a>
+    <a href="#menu">Menu</a>
+    <!-- Liên kết ngoại -->
+    <a href="https://tiki.vn/search?q=lego+city" target="_blank">Order</a>
+    <hr noshade style="width:50%;height: 5px;">
+    <h2 style="color: #996633; text-align:center;">About our cafe</h2>
+    <p style="text-align:end;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, accusantium? <br>
+        <!-- lorem10 -->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Fuga blanditiis sit voluptatem eum nihil incidunt
+        dolor
+        ad in ex consequatur. <br><i>Necessitatibus cumque rem minus quo ratione fuga harum officia. Soluta, obcaecati
+            veritatis.</i> <br> <b> consectetur eius, in consequatur dolor culpa mollitia aliquam deserunt quam modi
+            amet
+            magnam
+            nihil odio voluptas at quos!</b> <br> Debitis, voluptate? Amet accusantium nisi corrupti, ex in ipsum a at
+        hic
+        minima, <br>
+        consequatur voluptatem voluptatum ipsam dolores, cumque assumenda eum animi dolorum accusamus culpa quae
+        similique illo! <br> Quaerat delectus aspernatur ex rerum molestias nostrum rem dolore ut est, accusamus eos
+        saepe!
+        Magni <br> tempora repellendus ea architecto doloremque rem?
+        <!-- lorem100 -->
+    </p>
+    <hr noshade style="width:50%;height: 5px;">
+    <h2 style="color: #996633; text-align:center;">Special Items </h2>
+    <h3>The coffee list 1</h3>
+    <ul type="circle">
+        <li>Black coffee</li>
+        <li>Pink coffee</li>
+        <li>Gree </li>
+    </ul>
+    <img src="./images/chilling-cafe-11.jpg" alt="cafe coffee">
+    <img src="./images/chilling-cafe-12.jpg" alt="">
+    <!-- src:chứa đường dẫn đến bức hình
+            1.Đường dẫn tuyệt đối:C:\Users\DELL\Desktop\cybersoft\Cybersoft coffee\images
+            2.Đường dẫn tương đối: ./: vị trí hiện tại của file 
+                                    ../ :nhảy ra 1 cấp thư mục cha-->
+    <!-- alt: 3 chức năng
+            1.Hỗ trợ xem code, sửa code cho lập trình viên khi ảnh không hiển thị 
+            2.Mô tả hình ảnh để google tìm kiếm, hỗ trợ SEO
+            3.Hỗ trợ cho người khiếm thị (web accessability) -->
+
+    <!-- Cú pháp  tạo ra nhiều list trong một lần: ul>li*(số list cần tạo)
+        <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul> -->
+    <h3>The coffee list 2</h3>
+    <ol type="I">
+        <li>Black coffee</li>
+        <li>Pink coffee</li>
+        <li>Gree </li>
+    </ol>
+    <img src="./images/chilling-cafe-13.jpg" alt="">
+    <hr noshade style="width:50%;height: 5px;">
+    <h2 id="menu" style="color: #996633; text-align:center;">Menu</h2>
+    <table border="2" style="width: 800px;height: 450px;" align="center" cellspacing="0">
+        <tr style="background-color: #c4cdd6;">
+            <th colspan="2">Name</th>
+            <th>Type</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td style="background-image:url(./images/chilling-cafe-13.jpg); color: white;" rowspan="4">Traditional Coffee</td>
+            <td rowspan="2">Vietnamese coffee pin</td>
+            <td>Hot</td>
+            <td>60.000</td>
+        </tr>
+        <tr>
+            <td>Cold</td>
+            <td>28.000</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Milk coffee</td>
+            <td>Hot</td>
+            <td>38.000</td>
+        </tr>
+        <tr>
+            <td>Cold</td>
+            <td>54.000</td>
+        </tr>
+        <tr>
+            <td style="background-image: url(./images/chilling-cafe-11.jpg); color: white;" rowspan="3">Expresso</td>
+            <td>American Coffee</td>
+            <td rowspan="3">Hot</td>
+            <td>110.000</td>
+        </tr>
+        <tr>
+            <td>Machiato</td>
+            <td rowspan="2">40.000</td>
+        </tr>
+        <tr>
+            <td>Cappuchino</td>
+        </tr>
+    </table>
+    <!-- tr:table row
+         td: defined a cell in a table:
+         th: defined a header: cột tiêu đề-->
+    <hr noshade style="width:50%;height: 5px;">
+    <h2 style="color: #996633; text-align:center;">Talk to u </h2>
+    <p style="text-align: center;">Reach us Via <b>Email<a href="mailto:cybercafe@gmail.com">cybercafe@gmail.com</a></b> or <b>Hotline:<a href="tel:+961051014">0961051014</a>.</b>Thank you</p>
+</body>
+
+</html>

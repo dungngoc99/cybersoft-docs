@@ -1,0 +1,487 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.title,
+.title-black {
+    margin-bottom: 50px;
+}
+
+.title p:first-child {
+    color: #e62b4a;
+}
+
+.title h2 {
+    color: white;
+    font-size: 50px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.title p:last-child {
+    color: #888888;
+}
+
+.title-black p:first-child {
+    color: #888888;
+}
+
+.title-black h2 {
+    color: black;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.title-black p:last-child {
+    color: #888888;
+}
+
+/* HEADER */
+.header {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    /* các thẻ được gán positon thì trình duyệt quy định thẻ nào sinh ra sau sẽ có index lớn hơn, dùng index hơn hơn sẽ nằm đè lên index nhỏ */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 20px 0;
+    width: 75%;
+}
+
+.header-content .logo {
+    font-size: 2rem;
+}
+
+.header-content a {
+    color: white;
+    font-size: 1rem;
+}
+
+.header-nav ul {
+    display: flex;
+    gap: 52px;
+
+}
+
+/* END HEADER */
+
+/* CAROUSEL */
+.carousel {
+    background-image: url(../image-video/home_slider.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-content button {
+    padding: 15px 25px;
+    background-color: #e62b4a;
+    border: 1px solid #e62b4a;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: white;
+}
+
+.carousel-content button:hover {
+    background-color: #af2239;
+}
+
+.carousel-icon {
+    font-size: 50px;
+    color: #e62b4a;
+    /* animation: name duration timing-function delay interaction-count direction fill-mode 
++ name: tên hiệu ứng, tên chu kì được tạo ra bằng keyframe
++ duration: quãng thời gian mà keyframe thực hiện một chu kì
++ timing-function: quy định tốc độ nhanh chậm trong các giai đoạn của 1 chu kì
++ delay:độ trễ của hiệu hứng
++ interation-count:số lần lặp lại 1 chu kì
++ direction & fill-mode: tạo hiệu ứng ngược lại từ to ->from
+*/
+    animation: upDownZoom 3s linear 0s infinite;
+}
+
+/* keyframe:giúp khai báo chuyển động, trạng thái của một chu kì 1 lần chuyển động 1 lần chu kì: 
++ from - to
++ 0 - 100% */
+
+/* END CAROUSEL */
+
+/* SERVICE */
+.service {
+    margin: 0 auto;
+    background-color: black;
+}
+
+.service-title {
+    color: white;
+    text-align: center;
+}
+
+.service-content {
+    color: #888888;
+    width: 75%;
+    margin: 0 auto;
+    text-transform: uppercase;
+
+}
+
+.service-content .service-item {
+    background-color: white;
+    width: 214px;
+    height: 230px;
+    margin: 0 10px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.service-item p {
+    font-size: 14px;
+
+}
+
+.service-item i {
+    font-size: 50px;
+}
+
+/* trước hover */
+.service-item::before {
+    content: "";
+    height: 0px;
+    width: 5px;
+    background-color: #e62b4a;
+    /* before, after là loại inline, đổi loại thì mứi xết kích thước được */
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.5s;
+}
+
+/* sau hover */
+.service-item:hover::before {
+    height: 100%;
+}
+
+.service .slick-dots li button:before {
+    font-size: 15px;
+    color: white;
+}
+
+/* before, after: giúp chúng ta tạo ra những thẻ con html thông qua css, giúp tạo đường gạch tạo hiệu ứng trên giao diện. Quy định của before or after phải có thuộc tính contentF*/
+.service .slick-dots li.slick-active button:before {
+    color: #e62b4a;
+}
+
+/* END SERVICE */
+
+/* BLOG */
+.blog {
+    padding: 100px 0;
+    background-color: #F3F3F3;
+    text-align: center;
+}
+
+.blog-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin: 50px auto 0;
+    width: 75%;
+}
+
+.blog-item1 {
+    grid-row: 1/3;
+    grid-column: 1/span 2;
+}
+
+.blog-item10 {
+    grid-column: 3/5;
+    grid-row: 3/5;
+}
+
+.blog-item img {
+    width: 100%;
+    height: 100%;
+    /* object-fit:cover=> để ảnh vừa với khung chứa nó */
+    object-fit: cover;
+    filter: contrast(0.5) grayscale(0.5);
+}
+
+/* overflow:hidden => ẩn những item tràn ra khỏi div cha */
+.blog-item {
+    position: relative;
+    overflow: hidden;
+}
+
+/* trước hover */
+.blog-overlay {
+    background-color: rgba(230, 43, 74, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+
+.blog-icon {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background-color: white;
+    color: black;
+    transform: translateY(20px);
+    transition: 0.7s;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+
+.blog-infor {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    transform: translateY(20px);
+    transition: 0.5s;
+    color: white;
+    text-align: start;
+}
+
+/* sau hover */
+.blog-item:hover .blog-icon {
+    transform: translateY(0);
+}
+
+.blog-item:hover .blog-infor {
+    transform: translateY(0);
+}
+
+.blog-item:hover .blog-overlay {
+    opacity: 1;
+}
+
+.blog-icon:hover {
+    background-color: black;
+    color: white;
+}
+
+/* sử dụng fancybox để dùng thư viện */
+/* END BLOG */
+
+/* NUMBER */
+.number {
+    background-color: black;
+}
+
+/* xử lí rung lắc chữ */
+.number-item {
+    width: 25%;
+}
+
+.number-content {
+    margin: 0 auto;
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    text-align: center;
+    color: white;
+
+    font-size: 20px;
+}
+
+.number-item p:first-child {
+    font-size: 60px;
+    font-weight: 300;
+}
+
+.number-item p:last-child {
+    font-size: 20px;
+    font-weight: 400;
+    color: #888888;
+}
+.counter{
+    display: block;
+}
+/* END NUMBER */
+
+/* EXP */
+.exp {
+    padding: 100px 0;
+    background-image: url(../image-video/bussiness_img_1.jpg);
+    background-size: cover;
+    background-position: center;
+    /* cố định hình nền background */
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.exp-content {
+    margin: auto;
+    width: 75%;
+}
+
+.exp-content video {
+    width: 100%;
+}
+
+.exp-title {
+    color: white;
+}
+
+/* END EXP */
+
+/* CONTACT */
+.contact {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contact-content {
+    display: flex;
+    margin: 30px auto 0;
+    width: 70%;
+}
+
+.contact-map {
+    width: 60%;
+}
+
+.contact-map iframe {
+    width: 100%;
+}
+
+.contact-form {
+    width: 40%;
+
+}
+
+.contact-form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Back to Top */
+.backToTop {
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    line-height: 60px;
+    background-color: #e62b4a;
+    color: white;
+    display: block;
+    /* cài đặt vị trí cố định theo body */
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    /* ẩn nút back to top */
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+/* hiện nút back to top */
+.cd-top--is-visible {
+    /* back-to-top button visible */
+    visibility: visible;
+    opacity: 1;
+}
+
+/* keyframe: khai báo ở cuối của CSS */
+@keyframes upDown {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(50px);
+    }
+}
+
+@keyframes upDownRotate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+
+
+    }
+
+    50% {
+        transform: translateY(100px) rotate(180deg);
+
+    }
+
+    100% {
+        transform: translateY(100px) rotate(360deg);
+    }
+}
+
+@keyframes upDownZoom {
+    0% {
+        transform: translateY(0) scale(1);
+
+
+    }
+
+    50% {
+        transform: translateY(25px) scale(1.5);
+
+    }
+
+    100% {
+        transform: translateY(100px) scale(2);
+    }
+}
+
+@keyframes upDownZoom {
+    0% {
+        transform: translateY(0) scale(1);
+
+
+    }
+
+    50% {
+        transform: translateY(25px) scale(1.5);
+
+    }
+
+    100% {
+        transform: translateY(100px) scale(1.6);
+    }
+}
+
+/* END CONTACT */

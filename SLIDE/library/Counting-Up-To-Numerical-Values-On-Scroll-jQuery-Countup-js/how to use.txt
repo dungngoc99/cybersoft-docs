@@ -1,0 +1,18 @@
+-Thêm đoạn code script dưới đây vào trước body
+trong đó, .counter là tên của các số muons chạy
+-web:
+https://www.jqueryscript.net/other/Counting-Up-To-Numerical-Values-On-Scroll-jQuery-Countup-js.html#google_vignette
+
+ <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- WAYPOINT JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"
+        integrity="sha512-oy0NXKQt2trzxMo6JXDYvDcqNJRQPnL56ABDoPdC+vsIOJnU+OLuc3QP3TJAnsNKXUXVpit5xRYKTiij3ov9Qg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- COUNTING UP JS -->
+    <script src="./js/jquery.countup.js"></script>
+    <script>
+    $('.counter').countUp();
+    </script>

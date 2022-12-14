@@ -1,0 +1,21 @@
+Tổng hợp một số thư viện giúp các bạn làm hiệu ứng cho phần bài tập
+Scroll mượt:
+http://iamdustan.com/smoothscroll/
+Animate on scroll:
+https://wowjs.uk/
+https://michalsnik.github.io/aos/
+- Animate:
+https://animate.style/
++ chạy được cho bootstrap, owl carousel
++ không dùng được cho slick
+- Carousel:
+https://kenwheeler.github.io/slick/ (recommend)
+https://owlcarousel2.github.io/OwlCarousel2/
+http://responsiveslides.com/
+Animation for filtering and sorting:
+https://www.kunkalabs.com/tutorials/
+Hover effect:
+https://tympanus.net/Development/HoverEffectIdeas/
+https://ianlunn.github.io/Hover/
+- Card (bootstrap)
++ Dùng để đưa những tấm card có chứa nội dung liên kết
