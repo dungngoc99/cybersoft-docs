@@ -1,0 +1,21 @@
+$border: 2px solid $color-blue;
+
+.btnPhone-white {
+  @include buttonStyle(transparent, $border, 8px, 13.5px, 44px);
+  @include textStyle($color-blue, 14px, 600);
+  letter-spacing: 0.03rem;
+  box-shadow: 0 3px 6px #c9d8f4;
+  transition: 0.5s;
+  &:hover {
+    @include buttonStyleHover($color-blue, $color-white);
+  }
+}
+.btnPhone-blue {
+  @include buttonStyle($color-blue, none, 8px, 15.5px, 46px);
+  @include textStyle($color-white, 14px, 600);
+  letter-spacing: 0.03rem;
+  transition: 0.5s;
+  &:hover {
+    opacity: 0.75;
+  }
+}

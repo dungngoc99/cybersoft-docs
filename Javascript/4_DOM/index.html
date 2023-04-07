@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4. DOM</title>
+    <style>
+      .container {
+        background-color: aqua;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">DOM</h1>
+    <p id="content">Hello BC42</p>
+
+    <br />
+    <br />
+
+    <input id="username" type="text" value="cybersoft" />
+    <button id="click">Click</button>
+
+    <br />
+    <br />
+
+    <h1 id="cybersoft" style="display: none">Cybersoft Academy</h1>
+    <button id="show">Show</button>
+
+    <br />
+    <br />
+
+    <h1>Bài tập bóng đèn</h1>
+    <button id="turn-on">BẬT ĐÈN</button>
+    <img id="bulb" src="./img/pic_bulboff.gif" />
+    <button id="turn-off">TẮT ĐÈN</button>
+
+    <br />
+    <br />
+
+    <h1>Bài tập Đăng Nhập</h1>
+    <div>
+      <label for="tai-khoan">Tài Khoản</label>
+      <input id="tai-khoan" />
+    </div>
+    <div>
+      <label for="mat-khau">Mật Khẩu</label>
+      <input type="password" id="mat-khau" />
+    </div>
+    <button id="login">Đăng Nhập</button>
+    <div style="display: none" id="output"></div>
+
+    <div id="wrapper"></div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

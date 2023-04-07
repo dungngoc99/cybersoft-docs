@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+html,
+body {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Nunito Sans", sans-serif;
+}
+$color-collection: (
+  "blue-light": $color-blue-light,
+  "blue-dark": $color-blue-dark,
+  "blue": $color-blue,
+  "white": $color-white,
+  "black": $color-black,
+);
+@each $key, $value in $color-collection {
+  // vd: $key:blue-ligth => .color-blue-light
+  .color-#{$key} {
+    color: $value;
+  }
+}
+// Tạo  ra các class từ col-1 đến col-12
+$bearkpoint-list: "sm", "md", "lg", "xl"; //list
+@for $number from 1 through 12 {
+  .col-#{$number} {
+    width: 100 * $number/12;
+  }
+  //Tạo các class từ col-sm-1 col-md 1 ...
+  @each $breakpoint in $bearkpoint-list {
+    .col-#{$breakpoint}-#{$number} {
+      width: 100 * $number/12; 
+    }
+  }
+}

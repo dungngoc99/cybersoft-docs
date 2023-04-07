@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Phần UI của Form -->
+      <div class="form-group">
+        <label>Name</label>
+        <input class="form-control" id="name" />
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input class="form-control" id="email" />
+      </div>
+      <div class="form-group">
+        <label>Address</label>
+        <input class="form-control" id="address" />
+      </div>
+      <button class="btn btn-success" id="submit">Thêm Sinh Viên</button>
+
+      <!-- Phần UI của Table -->
+      <table class="table mt-5">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody id="student-list"></tbody>
+      </table>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
