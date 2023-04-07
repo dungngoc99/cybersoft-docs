@@ -24,7 +24,7 @@ a {
 .section__container {
   width: 1200px;
   margin: 0 auto;
-  padding-top: 42px;
+  padding-top: 115px;
 }
 
 .section__name {
@@ -120,6 +120,7 @@ a {
 /* HERO */
 .hero-wrapper {
   overflow: hidden;
+  padding-top: 42px;
 }
 
 .hero-container {
@@ -666,6 +667,7 @@ a {
   flex-direction: column;
   margin: 0 auto;
 }
+
 .testimonial__item {
   padding: 30px;
   text-align: center;

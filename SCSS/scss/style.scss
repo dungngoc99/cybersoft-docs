@@ -1,0 +1,14 @@
+// Thứ tự import
+@import "./Helpers/variable";
+@import "./Helpers/mixins";
+
+@import "./Base/reset";
+@import "./Base/customize";
+
+@import "./Components/button";
+@import "./Components/card";
+
+@import "./Layout/header";
+@import "./Layout/carousel";
+@import "./Layout/product";
+@import "./Layout/footer";

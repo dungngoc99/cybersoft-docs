@@ -1,0 +1,40 @@
+// Mixin: dùng để tạo ra các hàm tái sử dụng
+@mixin textStyle($color, $fs, $fw) {
+  color: $color;
+  font-size: $fs;
+  font-weight: $fw;
+}
+
+@mixin buttonStyle($bg, $border, $border-radius, $px, $py) {
+  background-color: $bg;
+  border: $border;
+  border-radius: $border-radius;
+  padding: $px $py;
+}
+@mixin buttonStyleHover($bg, $color) {
+  background-color: $bg;
+  color: $color;
+}
+@mixin responsive($screen) {
+  //map-has-key là một hàm dùng để kiểm tra xem một key có tồn tại trong map không
+  @if (map-has-key($map: $breakpoints, $key: $screen)) {
+    // map-get là hàm để lấy giá trị trong map bằng key
+    $width: map-get(
+      $map: $breakpoints,
+      $key: $screen,
+    );
+    @media screen and (min-width: $width) {
+      @content;
+    }
+  }
+}
+
+/*Sử dụng:
+@include responsice("md") {
+  color:red;}
+  
+Thay vì:
+  @media screen and (min-width:768px){
+    color:red;
+  }
+*/

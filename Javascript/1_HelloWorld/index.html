@@ -4,17 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello World</title>
+    <title>1. Hello World</title>
+    <link rel="stylesheet" href="styles.scss">
   </head>
   <body>
     <h1>Javascript</h1>
-    <!-- Nên để script cuối cùng của body để đảm bảo nếu câu lệnh bị lỗi thì ít nhất giao diện trang web cũng đã hiển thị ra -->
+    <!-- Thẻ script cho phép ta thực hiện các lệnh javascript bên trong -->
+    <!-- Nên để thẻ script ở dưới cùng của body, để đảm bảo nếu các câu lệnh này bị lỗi thì ít nhất giao diện của trang web cũng đã được hiển thị ra -->
     <script>
-      // câu lệnh để hiển thị một text ở tab console browser
-      console.log("Hello World!!!");
-      console.log("Hello World!!!");
+      // Câu lệnh để hiển thị một text ở console của browser
       console.log("Hello World!!!");
     </script>
+
+    <!-- Thay vì viết JS trực tiếp bên trong thẻ script ta nên tách thành file JS riêng và gắn vào thông qua thuộc tính src -->
     <script src="./index.js"></script>
   </body>
 </html>

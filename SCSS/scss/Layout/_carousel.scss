@@ -1,0 +1,37 @@
+.cover {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.carousel {
+  padding-top: 100px;
+  background-image: url("../../img/image/product-header-bg.jpg");
+
+  // Kế thừa lại các thuộc tính của một class khác
+  @extend .cover;
+  & &-content {
+    & > h1 {
+      @include textStyle($color-blue, 44px, 700);
+    }
+    & > h3 {
+      @include textStyle($color-blue-dark, 1.6rem, 600);
+      letter-spacing: 0.015rem;
+      margin-bottom: 30px;
+    }
+    & > p {
+      @include textStyle($color-black, 1.1rem, 400);
+      margin-bottom: 25px;
+    }
+  }
+}
+// Từ mốc 768px trở lên
+@include responsive("md") {
+  .carousel {
+    padding-top: 255px;
+    & &-content {
+      & > h1 {
+        font-size: 70px;
+      }
+    }
+  }
+}
